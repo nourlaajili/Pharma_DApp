@@ -1,0 +1,13 @@
+/* Apply to the body to make the particles cover the entire page */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Optional: if you need to customize the layout of other elements */
+#root {
+  position: relative;
+  z-index: 1; /* Ensure content is above the particles */
+}

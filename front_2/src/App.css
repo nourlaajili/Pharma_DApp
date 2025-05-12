@@ -1,0 +1,302 @@
+/* App.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Typography */
+h1, h2, h3, h4, h5, h6,ul {
+  margin-bottom: 1rem;
+  color: #fff; /* White text for better contrast */
+}
+
+
+
+/* Body with Background Image */
+body.dark {
+  margin: 0;
+  padding-top: 0;
+    background-image: url('./assets/background.jpg'); /* Path to the image */
+  background-size: cover; /* Cover the entire screen */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  background-attachment: fixed; /* Fix the background while scrolling */
+  color: #fff;
+  position: relative; /* Required for overlay */
+}
+
+/* Overlay */
+body.dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.733); /* Semi-transparent black overlay */
+  z-index: -1; /* Place it behind the content */
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0); /* Semi-transparent white background */
+  position: relative; /* Ensure it's above the overlay */
+  z-index: 1; /* Place it above the overlay */
+}
+/* App.css */
+/* App.css */
+
+/* Center the card on the screen */
+.center-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+}
+
+/* Transparent card styling */
+.transparent-card {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Optional: Adds a blur effect */
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 1200px; /* Adjust as needed */
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: Adds a subtle border */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 ,pre{
+  margin-bottom: 1rem;
+  color: #fff !important; /* White text for better contrast */
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #eee; /* Light gray text */
+}
+
+/* Links */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Buttons */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+/* Forms */
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: transparent; /* Make the background transparent */
+  color: #fff; /* Light text color for better contrast */
+}
+
+input::placeholder, textarea::placeholder, select::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Light placeholder text */
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #3498db;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background on focus */
+}
+
+/* Cards */
+.card-body {
+  background-color: #ffffff00 !;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+    
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: #fff !important;;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* DrugList Component Styles */
+.table-container {
+  margin: 20px;
+}
+
+.table-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid white; /* White outline for the table */
+}
+
+.table-table th,
+.table-table td {
+  padding: 12px;
+  border: 1px solid white; /* White outline for cells */
+  text-align: left;
+  color: #fff;
+}
+
+.table-table th {
+  background-color: #333; /* Dark background for headers */
+  color: white; /* White text for headers */
+}
+
+.table-table tr {
+  border: 1px solid white; /* White outline for rows */
+}
+
+/* Link Styles */
+.hashscan-link,
+.details-link {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none; /* Remove underline */
+}
+
+.hashscan-link:hover,
+.details-link:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Home Page Styles */
+
+
+.home-title {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  color: #fff;
+  text-align: center;
+}
+.hom-btn{
+  display: "flex";
+ justify-content:space-between;
+  
+}
+
+/* Custom Navbar Styles */
+.navbar-custom {
+  background-color: rgba(0, 0, 0, 0.7) !important; /* Transparent black background */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional: Add a subtle border */
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: white !important; /* White text for brand and links */
+}
+
+.navbar-custom .nav-link:hover {
+  color: #ddd !important; /* Light gray text on hover */
+}
+
+.navbar-custom .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5); /* White border for the toggle button */
+}
+
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* White icon for the toggle button */
+}
+
+
+/* Input Field Styling */
+.form-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.register-user-container{
+  margin: 20px auto;
+  padding: 20px;
+  display: inline;
+  
+}
+/* Dropdown (Select) Styling */
+.form-select {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: black; /* Black background */
+  color: white; /* White text */
+}
+
+/* Button Styling */
+.form-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}

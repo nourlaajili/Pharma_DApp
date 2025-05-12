@@ -1,0 +1,423 @@
+/* app2.css - Light Mode */
+
+
+.table-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.table-header {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table-cell {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
+.table-row:hover {
+  background-color: #f8f9fa;
+}
+
+.external-link {
+  color: #0d6efd;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+}
+
+.external-link:hover {
+  color: #0a58ca;
+  text-decoration: underline;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  position: relative;
+}
+
+
+.status-rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-delivered {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.status-processing {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+.rejection-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #721c24;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.status-badge:hover .rejection-tooltip {
+  opacity: 1;
+  visibility: visible;
+  bottom: calc(100% + 5px);
+}
+
+.error-message {
+  color: #dc3545;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  background-color: #f8d7da;
+  border-radius: 0.25rem;
+  border: 1px solid #f5c6cb;
+}
+/*/////////////*/
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.table-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+
+
+.table-header {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table-cell {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
+.table-row:hover {
+  background-color: #f8f9fa;
+}
+
+.external-link {
+  color: #0d6efd;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+}
+
+.external-link:hover {
+  color: #0a58ca;
+  text-decoration: underline;
+}
+
+.internal-link {
+  color: #198754;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease-in-out;
+}
+
+.internal-link:hover {
+  color: #146c43;
+  text-decoration: underline;
+}
+
+/* Status Badges - Reusable across application */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+.status-requested {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-approved {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Additional statuses can be added as needed */
+.status-active {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.status-inactive {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+/*/////////*/
+.drug-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.drug-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.drug-info-card, .qr-code-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.info-row {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.info-label {
+  font-weight: 600;
+  width: 180px;
+  color: #555;
+}
+
+.info-value {
+  flex: 1;
+}
+
+.qr-code-image {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: white;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.download-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.history-table th, .history-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.history-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.history-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.hashscan-link {
+  color: #2196F3;
+  text-decoration: none;
+}
+
+.hashscan-link:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #f44336;
+  margin: 10px 0;
+}
+
+.status-pending {
+  color: #FF9800;
+}
+
+.status-approved {
+  color: #4CAF50;
+}
+
+.status-rejected {
+  color: #F44336;
+}
+/* Body and background */
+body.light {
+    background-image: url('./assets/background2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    position: relative;
+  }
+  
+  body.light::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(238, 250, 252, 0.5);
+    z-index: -1;
+  }
+  
+  /* Typography */
+  body.light h1,
+  body.light h2,
+  body.light h3,
+  body.light h4,
+  body.light h5,
+  body.light h6,
+  body.light ul,
+  body.light pre {
+    color: #333 !important;
+  }
+  
+  body.light p {
+    color: #555;
+  }
+  
+  /* Cards */
+  body.light .transparent-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Forms */
+  body.light input,
+  body.light textarea,
+  body.light select {
+    border: 1px solid #ced4da;
+    color: #495057;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  body.light input::placeholder,
+  body.light textarea::placeholder,
+  body.light select::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Tables */
+  body.light .table-table th,
+  body.light .table-table td {
+    border: 1px solid #dee2e6;
+    color: #495057;
+  }
+  
+  body.light .table-table th {
+    background-color: #e9ecef;
+    color: #495057;
+  }
+  
+  /* Navbar */
+  body.light .navbar-custom {
+    background-color: rgba(248, 249, 250, 0.9) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  body.light .navbar-custom .navbar-brand,
+  body.light .navbar-custom .nav-link {
+    color: #333 !important;
+  }
+  
+  body.light .navbar-custom .nav-link:hover {
+    color: #555 !important;
+  }
+  
+  body.light .navbar-custom .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  body.light .navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  /* Form elements */
+  body.light .form-select {
+    background-color: white;
+    color: #495057;
+    border: 1px solid #ced4da;
+  }
+  
+  /* Buttons */
+  body.light button {
+    color: #fff !important;
+    background-color: #3498db !important;
+  }
+  
+  body.light button:hover {
+    background-color: #2980b9 !important;
+  }
+  
+  body.light button:disabled {
+    background-color: #bdc3c7 !important;
+  }
